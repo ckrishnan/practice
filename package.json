@@ -1,9 +1,9 @@
 {
-  "name": "node-practice",
+  "name": "practice",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app.js"
+    "start": "node app.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -11,11 +11,20 @@
     "express": "~4.16.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "underscore": "^1.9.1"
   },
   "main": "app.js",
   "devDependencies": {},
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "Practice node json package",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckrishnan/practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ckrishnan/practice/issues"
+  },
+  "homepage": "https://github.com/ckrishnan/practice#readme"
 }

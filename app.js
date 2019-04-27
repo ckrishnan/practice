@@ -1,6 +1,12 @@
 var http = require('http');
 var fs = require('fs'); // get filestructure module
 var url = require('url'); // get url module
+var PORT = process.env.PORT || 5000;
+var os = require('os'); // add the operating system global method
+var EvEm = require('events'); // adds the CLASS Events, which contains objects... needs to be instantiated though
+var emitter = new EvEm(); // instantiates object with global class methods under events
+
+
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true); // assign url and parse requested url
@@ -20,10 +26,11 @@ http.createServer(function (req, res) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data); // valid filename requested is passed through function as `data`
         console.log("..Incoming request: " + req.url);
+        console.log(`..Free memory: ${os.freemem()}`)
         res.end();
 
     });
 
-}).listen(8080);
+}).listen(PORT);
 
 console.log("Server listening on port: 8080....");
